@@ -7,15 +7,15 @@ app = Flask(__name__)
 def home():  # put application's code here
   if request.method == "POST":
     # 出発地
-    origin = request.form.get('from')
+    start = request.form.get('start')
     # 到着地
-    destination = request.form.get('to')
+    goal = request.form.get('goal')
     # 人数
     people = request.form.get('people')
     # 日数
     days = request.form.get('days')
 
-    info = {'origin': origin, 'destination': destination, 'people': people, 'days': days}
+    info = {'start': start, 'goal': goal, 'people': people, 'days': days}
     return render_template('result.html', info=info)
 
   return render_template('form.html')
