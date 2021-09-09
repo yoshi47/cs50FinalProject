@@ -5,7 +5,7 @@ from navitime import getPoint, route
 
 app = Flask(__name__)
 
-# 車以外の移動、検索結果の保存、
+# 車以外の移動、検索結果の保存、ホテルの値段（最安値などの選択肢）、予算の詳細、FlaskFormを使う、csrfトークン、selectのリストを別ファイルに
 
 @app.route('/', methods=["GET", "POST"])
 def home():  # put application's code here
