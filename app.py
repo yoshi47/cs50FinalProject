@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request
 import requests
 
-from navitime import getPoint, route
+from api import getPoint, carPrices
 
 app = Flask(__name__)
 
-# 車以外の移動、検索結果の保存、ホテルの値段（最安値などの選択肢）、予算の詳細、FlaskFormを使う、csrfトークン、selectのリストを別ファイルに
+# 車以外の移動、検索結果の保存、ホテルの値段（最安値などの選択肢）、予算の詳細、FlaskFormを使う、csrfトークン、selectのリストを別ファイルに、ロード画面の変化
+
+hotel = 8000
+
 
 @app.route('/', methods=["GET", "POST"])
 def home():  # put application's code here
@@ -24,7 +27,9 @@ def home():  # put application's code here
     goalCoord = getPoint(goal)
 
     # 移動にかかる料金
-    fare = route(startCoord, goalCoord)
+    fare = carPrices(startCoord, goalCoord)
+    # 宿代を足す
+    fare += hotel
 
     info = {'start': start, 'goal': goal, 'people': people, 'days': days, 'result': fare}
     return render_template('result.html', info=info)

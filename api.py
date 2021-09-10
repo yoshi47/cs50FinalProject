@@ -30,7 +30,7 @@ def getPoint(place: str):
   point = str(response['items'][0]['coord']['lat']) + ',' + str(response['items'][0]['coord']['lon'])
   return point
 
-def route(start: str, goal: str):
+def carPrices(start: str, goal: str):
   url = "https://navitime-route-car.p.rapidapi.com/route_car"
 
   headers = {
