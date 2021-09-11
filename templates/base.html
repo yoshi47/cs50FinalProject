@@ -7,17 +7,60 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Jquery, Jquery-ui -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <link rel="stylesheet" href="/static/styles.css">
 
-    <title>簡単見積もり {% block title %}{% endblock %}</title>
+    <title>イクヨサン {% block title %}{% endblock %}</title>
   </head>
-  <body>
-    <main class="container-fluid p-5">
-        {% block main %}{% endblock %}
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <body>
+  <main class="container-fluid p-5">
+    {% block main %}{% endblock %}
+  </main>
+
+  {#    オートコンプリート#}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#start").autocomplete({
+        source: function (request, response) {
+          $.ajax({
+            async: true,
+            crossDomain: true,
+            url: "https://navitime-geocoding.p.rapidapi.com/address/autocomplete?word=" + request.term + "&coord_unit=degree&datum=wgs84",
+            method: "GET",
+            headers: {
+              "x-rapidapi-key": "1a474a5630msh42c5ec5a2ecc003p138341jsn244a05255fac",
+              "x-rapidapi-host": "navitime-geocoding.p.rapidapi.com",
+            },
+          })
+          {#地名だけを抽出#}
+            .done(function (data) {
+              let places = [];
+              for (let i = 0, len = data.items.length; i < len; i++) {
+                places.push(data.items[i].name);
+              }
+              response(places);
+            });
+        },
+        {#予測を前に表示する#}
+        open: function () {
+          $('.ui-autocomplete').css('z-index', 2147483647);
+          $('.ui-menu').css('z-index', 2147483647);
+        },
+        {#何度も通信しないように#}
+        delay: 1000,
+        minLength: 2,
+      });
+    });
+
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
   </body>
 </html>
