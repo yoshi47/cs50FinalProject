@@ -22,10 +22,10 @@
     {% block main %}{% endblock %}
   </main>
 
-  {#    オートコンプリート#}
+  {# オートコンプリート #}
   <script type="text/javascript">
     $(document).ready(function () {
-      $("#start").autocomplete({
+      $(".place").autocomplete({
         source: function (request, response) {
           $.ajax({
             async: true,
@@ -52,7 +52,7 @@
           $('.ui-menu').css('z-index', 2147483647);
         },
         {#何度も通信しないように#}
-        delay: 1000,
+        delay: 3000,
         minLength: 2,
       });
     });
