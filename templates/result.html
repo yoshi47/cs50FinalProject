@@ -6,6 +6,8 @@
 
 {% block main %}
 
-  <h3 class="mb-2 text-center">{{ info['start'] }}から{{ info['goal'] }}へ{{ info['people'] }}人で{{ info['days'] }}泊は</h3>
-  <h2 class="mb-4 text-center">およそ{{ info['result'] }}円かかります</h2>
+  <h3 class="mt-3 mb-3 text-center">{{ info['start'] }}から{{ info['goal'] }}へ{{ info['people'] }}人で{{ info['days'] }}泊は</h3>
+  <h3 class="mb-4 text-center">およそ "<span class="font-weight-bold">{{ info['result'] }}円</span>" かかります</h3>
+
+  <p class="text-center pt-4"><a href="/">前の画面に戻る</a></p>
 {% endblock %}
