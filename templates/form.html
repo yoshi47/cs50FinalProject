@@ -25,14 +25,9 @@
         <label for="people" class="col-2 col-form-label">人数</label>
         <div class="col-auto">
           <select name="people" class="form-select" id="people">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
+            {% for they in range(1, 9) %}
+              <option value={{ they }}>{{ they }}</option>
+            {% endfor %}
           </select>
         </div>
         <label for="people" class="col-1 col-form-label">人</label>
@@ -42,9 +37,9 @@
         <label for="days" class="col-2 col-form-label">宿泊数</label>
         <div class="col-auto">
           <select name="days" class="form-select" id="days">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            {% for day in range(1, 4) %}
+              <option value={{ day }}>{{ day }}</option>
+            {% endfor %}
           </select>
         </div>
         <label for="days" class="col-1 col-form-label">泊</label>
