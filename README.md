@@ -6,7 +6,11 @@ Using Python, Flask, HTML, CSS, Bootstrap, Jquery
 
 Rakuten RapidAPIに公開されているNAVITIMEさんのAPIを利用しました。
 
-##仕様
+これはデモのURLです。是非試してみてください。
+
+[Ikuyosan](https://ikuyosan.herokuapp.com/)
+
+## 仕様
 
 出発地と目的地、そして人数と宿泊数を入力することで旅行にいくらかかるか簡単な見積もりを出してくれます。
 
