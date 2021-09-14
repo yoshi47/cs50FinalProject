@@ -3,7 +3,14 @@
 #### Description: 簡単な旅行の見積もりを出します！
 
 
-Using Python, Flask, HTML, CSS, Bootstrap, Jquery
+### Using
+
+- Python
+- Flask
+- HTML
+- CSS
+- Bootstrap
+- Jquery
 
 Rakuten RapidAPIに公開されているNAVITIMEさんのAPIを利用しました。
 
@@ -29,7 +36,7 @@ Rakuten RapidAPIに公開されているNAVITIMEさんのAPIを利用しまし�
 
 ## 改善したいところ
 
-- オプションで旅行先でやることを選べるようにする。テーマパーク、キャンプ、温泉、スキー・スノーボード、シュノーケリングなど
+- オプションで旅行先でやることを追加できるようにする。テーマパーク、キャンプ、温泉、スキー・スノーボード、シュノーケリングなど
 - ホテルの値段が一律なので検索ごとに値段をを取得して計算する。
 - ロード画面を変える
 - 海外旅行対応
