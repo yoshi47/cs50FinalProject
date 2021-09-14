@@ -17,7 +17,7 @@ Rakuten RapidAPIに公開されているNAVITIMEさんのAPIを利用しまし�
 
 これはデモのURLです。是非試してみてください。
 
-[Ikuyosan](https://ikuyosan.herokuapp.com/)
+**[Ikuyosan](https://ikuyosan.herokuapp.com/)**
 
 ## 仕様
 
@@ -34,9 +34,18 @@ Rakuten RapidAPIに公開されているNAVITIMEさんのAPIを利用しまし�
 5. 宿代を足す
 6. 見積もり完成！！
 
+## APIについて
+
+Rakuten RapidAPIに公開されているものを使った。
+
+- NAVITIME Geocoding
+- NAVITIME Route(car)
+
+この２つを使って作成した。
+
 ## 改善したいところ
 
-- オプションで旅行先でやることを追加できるようにする。テーマパーク、キャンプ、温泉、スキー・スノーボード、シュノーケリングなど
+- オプションで旅行先でやることを追加できるようにする。テーマパーク、キャンプ、温泉、スキー・スノーボード、シュノーケリング、レンタカーなど
 - ホテルの値段が一律なので検索ごとに値段をを取得して計算する。
 - ロード画面を変える
 - 海外旅行対応
