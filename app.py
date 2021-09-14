@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # 車以外の移動、検索結果の保存、ホテルの値段（最安値などの選択肢）、予算の詳細、FlaskFormを使う、csrfトークン、selectのリストを別ファイルに、ロード画面の変化
 
-locale.setlocale(locale.LC_NUMERIC, 'ja_JP')
+locale.setlocale(locale.LC_NUMERIC, 'ja_JP.UTF-8')
 hotel = 8000
 
 
