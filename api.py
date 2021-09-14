@@ -1,9 +1,9 @@
 import requests
 
-
 # 燃費：リッター１５ｋｍ、ガソリン価格１５８円
 nenpi = 15
 gaso = 158
+
 
 # 地点の緯度・経度の取得
 def getPoint(place: str):
@@ -14,7 +14,7 @@ def getPoint(place: str):
     'x-rapidapi-host': "navitime-geocoding.p.rapidapi.com"
   }
 
-  querystring ={
+  querystring = {
     "offset": "0",
     "sort": "code_asc",
     "word": place,
@@ -30,6 +30,7 @@ def getPoint(place: str):
   point = str(response['items'][0]['coord']['lat']) + ',' + str(response['items'][0]['coord']['lon'])
   return point
 
+
 def carPrices(start: str, goal: str):
   url = "https://navitime-route-car.p.rapidapi.com/route_car"
 
@@ -39,12 +40,12 @@ def carPrices(start: str, goal: str):
   }
 
   querystring = {
-      "goal":goal,
-      "start":start,
-      "coord_unit":"degree",
-      "smart_ic":"use",
-      "datum":"wgs84"
-      }
+    "goal": goal,
+    "start": start,
+    "coord_unit": "degree",
+    "smart_ic": "use",
+    "datum": "wgs84"
+  }
 
   response = requests.request("GET", url, headers=headers, params=querystring).json()
 

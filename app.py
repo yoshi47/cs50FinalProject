@@ -1,13 +1,22 @@
-from flask import Flask, render_template, request
-import requests
+import locale
 
-from api import getPoint, carPrices
+from flask import Flask, render_template, request
+
+from api import carPrices, getPoint
 
 app = Flask(__name__)
 
 # 車以外の移動、検索結果の保存、ホテルの値段（最安値などの選択肢）、予算の詳細、FlaskFormを使う、csrfトークン、selectのリストを別ファイルに、ロード画面の変化
 
 hotel = 8000
+
+
+@app.context_processor
+def utility_processor():
+  def format_currency(amount):
+    return locale.format('%d', amount, True)
+
+  return dict(format_currency=format_currency)
 
 
 @app.route('/', methods=["GET", "POST"])
