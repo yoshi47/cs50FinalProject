@@ -18,10 +18,11 @@
 
 #### This app allows you to get a quick estimate of your trip. You can easily see how much you need for your trip.
 
-#### Place names are complemented using autocomplete, but will not be available if the API limit is exceeded. If this
-happens, please try to enter the name of the prefecture first. If this happens, please try to enter the name of the
-prefecture first, or the name of a place with the same name in a different place than you expected will be used.
+#### Place names are complemented using autocomplete, but will not be available if the API limit is exceeded.
+#### If this happens, please try to enter the name of the prefecture first.
+#### If this happens, please try to enter the name of the prefecture first, or the name of a place with the same name in a different place than you expected will be used.
 
+##### sorry
 #### I don't think so, but if the API requests reach the limit, this app will not work. Please wait until the next month.
 
 ## Technologies used
@@ -58,3 +59,7 @@ prefecture first, or the name of a place with the same name in a different place
 - Adding a Database
 
 ## What was difficult.
+
+#### I thought it would be difficult to get information using APIs, but I found out that it is not difficult if you follow the steps.
+Implementing the autocomplete function was the most technically difficult, since it was my first time to use ajax for communication, and it took a lot of time to apply it.
+I think this app could be improved, so I would like to add more functions little by little.
