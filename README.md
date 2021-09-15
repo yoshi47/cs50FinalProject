@@ -1,6 +1,14 @@
 # Ikuyosan
 
-#### Video Demo: https://youtu.be/TkhGPPXWBkg
+#### Video Demo
+
+There is a demo video on You Tube that explains how to use it. Please take a look.
+
+Here's the link.
+
+https://youtu.be/TkhGPPXWBkg
+
+#### Try this app
 
 You can try the app on [Heroku](https://ikuyosan.herokuapp.com/)
 
@@ -13,6 +21,8 @@ This app allows you to get a quick estimate of your trip. You can easily see how
 Place names are complemented using autocomplete, but will not be available if the API limit is exceeded. If this
 happens, please try to enter the name of the prefecture first. If this happens, please try to enter the name of the
 prefecture first, or the name of a place with the same name in a different place than you expected will be used.
+
+I don't think so, but if the API requests reach the limit, this app will not work. Please wait until the next month.
 
 ## Technologies used
 
@@ -46,45 +56,3 @@ As all applications this one can also be improved. Possible improvements:
 - Support overseas travel
 - Use FastAPI for the backend to speed up the process.
 - Adding a Database
-
-# いくよさん
-
-#### Video Demo: https://youtu.be/TkhGPPXWBkg
-
-Herokuを使ってこのアプリを公開しています。是非試してみてください。
-
-**[Ikuyosan](https://ikuyosan.herokuapp.com/)**
-
-## 仕様
-
-出発地と目的地、そして人数と宿泊数を入力することで旅行にいくらかかるか簡単な見積もりを出してくれます。
-
-地名はオートコンプリートを使って補完していますが、APIの仕様枠を超えると利用できなくなります。そうなったらなるべく都道府県名から入力してください。思っていたのとは違う場所の同じ名前の地名で見積もりがされてしまいます。
-
-## Technologies used
-
-- Flask
-- jQuery
-- NAVITIME API for Rakuten RapidAPI
-- Bootstrap
-- Heroku
-- Gunicorn
-
-## 見積もりの出し方
-
-1. ユーザーが情報を入力
-2. 出発地の目的地の住所の取得
-3. 移動経路をだして高速料金を出す
-4. 高速料金とガソリン代を足す
-5. 宿代を足す
-6. 見積もり完成！！
-
-## 改善したいところ
-
-- オプションで旅行先でやることを追加できるようにする。テーマパーク、キャンプ、温泉、スキー・スノーボード、シュノーケリング、レンタカーなど
-- ホテルの値段が一律なので検索ごとに値段をを取得して計算する。
-- ロード画面を変える
-- 海外旅行対応
-- 処理を早くするためにバックエンドにFastAPIを使う
-- データベースの追加
-
