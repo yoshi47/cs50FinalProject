@@ -1,28 +1,28 @@
 # Ikuyosan
 
-#### Video Demo
+### Video Demo
 
-There is a demo video on You Tube that explains how to use it. Please take a look.
+#### There is a demo video on You Tube that explains how to use it. Please take a look.
 
-Here's the link.
+#### Here's the link.
 
-https://youtu.be/TkhGPPXWBkg
+- https://youtu.be/TkhGPPXWBkg
 
-#### Try this app
+### Try this app
 
-You can try the app on [Heroku](https://ikuyosan.herokuapp.com/)
+#### You can try the app on [Heroku](https://ikuyosan.herokuapp.com/)
 
 ![img.png](https://user-images.githubusercontent.com/64204237/133374267-207abf51-f3e2-4d65-a49c-a0afdf0c3c3d.png)
 
 ## About
 
-This app allows you to get a quick estimate of your trip. You can easily see how much you need for your trip.
+#### This app allows you to get a quick estimate of your trip. You can easily see how much you need for your trip.
 
-Place names are complemented using autocomplete, but will not be available if the API limit is exceeded. If this
+#### Place names are complemented using autocomplete, but will not be available if the API limit is exceeded. If this
 happens, please try to enter the name of the prefecture first. If this happens, please try to enter the name of the
 prefecture first, or the name of a place with the same name in a different place than you expected will be used.
 
-I don't think so, but if the API requests reach the limit, this app will not work. Please wait until the next month.
+#### I don't think so, but if the API requests reach the limit, this app will not work. Please wait until the next month.
 
 ## Technologies used
 
@@ -35,7 +35,7 @@ I don't think so, but if the API requests reach the limit, this app will not wor
 
 ## How to get an estimate
 
-This app calculates your total spending every time!
+#### This app calculates your total spending every time!
 
 1. user enters information
 2. get the address of the starting point and destination
@@ -46,7 +46,7 @@ This app calculates your total spending every time!
 
 ## Possible improvements
 
-As all applications this one can also be improved. Possible improvements:
+#### As all applications this one can also be improved. Possible improvements:
 
 - Make it optional to add things to do on the trip. Theme parks, camping, hot springs, skiing/snowboarding, snorkeling,
   car rental, etc.
@@ -56,3 +56,5 @@ As all applications this one can also be improved. Possible improvements:
 - Support overseas travel
 - Use FastAPI for the backend to speed up the process.
 - Adding a Database
+
+## What was difficult.
