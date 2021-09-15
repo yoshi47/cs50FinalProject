@@ -11,6 +11,8 @@ You can try the app on [Heroku](https://ikuyosan.herokuapp.com/)
 This app allows you to get a quick estimate of your trip.
 You can easily see how much you need for your trip.
 
+Place names are complemented using autocomplete, but will not be available if the API limit is exceeded. If this happens, please try to enter the name of the prefecture first. If this happens, please try to enter the name of the prefecture first, or the name of a place with the same name in a different place than you expected will be used.
+
 ## Technologies used
 
 - Flask
