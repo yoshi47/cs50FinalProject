@@ -55,7 +55,6 @@
 - Traveling by public transportation
 - Change the load screen.
 - Support overseas travel
-- Use FastAPI for the backend to speed up the process.
 - Adding a Database
 
 ## What was difficult.
