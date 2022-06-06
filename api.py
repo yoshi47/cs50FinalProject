@@ -31,7 +31,7 @@ def getPoint(place: str):
   return point
 
 
-def carPrices(start: str, goal: str):
+def calculateCostOfMove(start: str, goal: str) -> int:
   url = "https://navitime-route-car.p.rapidapi.com/route_car"
 
   headers = {

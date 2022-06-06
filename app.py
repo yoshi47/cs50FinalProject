@@ -2,7 +2,7 @@ import locale
 
 from flask import Flask, render_template, request
 
-from api import carPrices, getPoint
+from api import calculateCostOfMove, getPoint
 
 app = Flask(__name__)
 
@@ -39,7 +39,7 @@ def home():  # put application's code here
     goalCoord = getPoint(goal)
 
     # 移動にかかる料金
-    fare = carPrices(startCoord, goalCoord)
+    fare = calculateCostOfMove(startCoord, goalCoord)
 
     # 宿代を足す
     hotel *= days
