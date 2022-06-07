@@ -7,4 +7,4 @@ class LogModel(models.Model):
     goal = models.CharField(max_length=255)
     people = models.IntegerField()
     days = models.IntegerField()
-    result = models.IntegerField()
+    result = models.IntegerField(default=0)

@@ -24,9 +24,9 @@ def TravelEstimate(request):
             # 到着地
             goal = request.POST['goal']
             # 人数
-            people = request.POST['people']
+            people = int(request.POST['people'])
             # 日数
-            days = request.POST['days']
+            days = int(request.POST['days'])
 
             # 緯度・経度の取得
             startCoord = getPoint(start)
@@ -40,10 +40,12 @@ def TravelEstimate(request):
             fare += charge
 
             # todo リザルトが保存できなくてエラー
-            LogModel.objects.create(result=fare)
+            last_logmodel = LogModel.objects.order_by('id').last()
+            last_logmodel.result = fare
+            last_logmodel.save()
 
             info = {'start': start, 'goal': goal, 'people': people, 'days': days, 'result': fare}
-            return render(request, 'result.html',context=info)
+            return render(request, 'result.html', info)
     else:
         form = TravelEstimateForm()
         return render(request, 'form.html', {'form': form, 'people_range': range(1, 9), 'days_range': range(1, 7)})
