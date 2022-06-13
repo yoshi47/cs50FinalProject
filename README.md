@@ -27,7 +27,8 @@
 
 ## Technologies used
 
-- Flask
+- ~~Flask~~
+- Django
 - jQuery
 - NAVITIME API for Rakuten RapidAPI
 - Bootstrap
@@ -49,13 +50,13 @@
 
 #### As all applications this one can also be improved. Possible improvements:
 
-- Make it optional to add things to do on the trip. Theme parks, camping, hot springs, skiing/snowboarding, snorkeling,
+- [ ] Make it optional to add things to do on the trip. Theme parks, camping, hot springs, skiing/snowboarding, snorkeling,
   car rental, etc.
-- Hotel prices are flat, so get the price for each search and calculate it.
-- Traveling by public transportation
-- Change the load screen.
-- Support overseas travel
-- Adding a Database
+- [ ] Hotel prices are flat, so get the price for each search and calculate it.
+- [ ] Traveling by public transportation
+- [ ] Change the load screen.
+- [ ] Support overseas travel
+- [x] Adding a Database
 
 ## What was difficult.
 
